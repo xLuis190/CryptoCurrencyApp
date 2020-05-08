@@ -7,19 +7,24 @@ body,html{
     background-color:#fff;
     border:none;
 }
-.card1{
+.crd{
     background-color: #E0E0F5;
     box-shadow: 3px 2px 3px #e0e0e0;
-    width: 30%;
-    border:0.01rem solid;
-    margin-top:1%;
-    margin-left: 1%;
-    padding: 1%;
-    display:inline-block;
+    border: 0.01rem solid;
+    margin-top: 1%;
+    margin-left: 1% !important;
+    display: inline-block;
+    width: 35em;
 }
+@media only screen and (max-width: 600px) {
+    .crd {
+      width: 30em;
+    }
+  }
 a{
     margin-top: 1%;
     display:block;
+    margin-bottom: 1%;
 }
 p{
     display: inline;;

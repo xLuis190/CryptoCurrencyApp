@@ -5,7 +5,7 @@ Vue.component('card',{
     
     template:`
     <div>
-    <div v-for="currency in currencies.Data" class="card1" >
+    <div  v-for="currency in currencies.Data" class="crd" >
             <h3>
                 <img :src="'https://cryptocompare.com'+currency.CoinInfo.ImageUrl" alt="">
                 {{currency.CoinInfo.FullName}} ({{currency.CoinInfo.Name}})
