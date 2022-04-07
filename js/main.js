@@ -10,7 +10,7 @@ Vue.component('card',{
                 <img :src="'https://cryptocompare.com'+currency.CoinInfo.ImageUrl" alt="">
                 {{currency.CoinInfo.FullName}} ({{currency.CoinInfo.Name}})
             </h3>
-            <h6>Price: {{Math.round((currency.DISPLAY.USD.PRICE*100)) /100}} USD 
+            <h6>Price: {{Math.round((currency.RAW.USD.PRICE*100)) /100}} USD 
                 <p style="color:red" v-if="currency.RAW.USD.CHANGEPCT24HOUR < 0"> {{Math.round((currency.RAW.USD.CHANGEPCT24HOUR *100) ) /100 }}% <i  class="fas fa-arrow-down" ></i></p>
                <p style="color:green" v-else>{{Math.round((currency.RAW.USD.CHANGEPCT24HOUR *100) ) /100 }}% <i  class="fas fa-arrow-up" > </i> </p>
              </h6>
@@ -35,7 +35,7 @@ new Vue({
             response => {
                 
                 this.currencies = response.data
-                console.log(this.currencies[0].DISPLAY.USD.PRICE)
+                console.log(this.currencies[0].RAW.USD.PRICE)
             })
         },
     },
