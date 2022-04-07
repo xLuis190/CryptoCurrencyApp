@@ -35,7 +35,7 @@ new Vue({
             response => {
                 
                 this.currencies = response.data
-                console.log(this.currencies[0].RAW.USD.PRICE)
+                console.log(this.currencies[0])
             })
         },
     },
