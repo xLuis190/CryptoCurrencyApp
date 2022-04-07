@@ -35,7 +35,7 @@ new Vue({
             response => {
                 
                 this.currencies = response.data
-                console.log(this.currencies[0])
+                console.log(this.currencies)
             })
         },
     },
